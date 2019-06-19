@@ -1,0 +1,103 @@
+.navigation {
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
+.parallelogram {
+  width: 150px;
+  height: 60px;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  transform: skew(20deg);
+  position: relative;
+  overflow: hidden;
+  border-right: 1px black solid;
+  cursor: pointer;
+}
+.last-parallelogram {
+  border-right: none;
+}
+
+.nav {
+  position: relative;
+}
+
+.nav .parallelogram-bg {
+  position: relative;
+  width: 120%;
+  height: 60px;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  transform: skew(-20deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+}
+
+.nav-about-me .parallelogram-bg {
+  background-image: url("https://i.ibb.co/VBjpNvZ/about-me.jpg");
+  background-position-y: -14px;
+}
+.nav-my-skills .parallelogram-bg {
+  background-image: url("https://i.ibb.co/YNndgrZ/skills.jpg");
+  background-position-y: -19px;
+}
+.nav-projects .parallelogram-bg {
+  background-image: url("https://i.ibb.co/pdSPJCj/projects.jpg");
+  background-position-y: -50px;
+}
+.nav-contact-me .parallelogram-bg {
+  background-image: url("https://i.ibb.co/DYF5FFp/contact.jpg");
+  background-position-y: -10px;
+}
+.nav .parallelogram-bg:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  cursor: pointer;
+}
+
+.nav .parallelogram-bg:hover + .text-bg {
+  background-color: orange;
+}
+
+.text {
+  position: absolute;
+  z-index: 1;
+  left: 6px;
+  bottom: 0;
+  line-height: 20px;
+  width: 100%;
+  transform: skew(0deg);
+  text-align: center;
+  color: black;
+  pointer-events: none;
+  -webkit-user-select: none;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.text-bg {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  height: 20px;
+  width: 100%;
+  box-sizing: content-box;
+  pointer-events: none;
+}
